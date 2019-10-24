@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - MenuUtama",
+            "request": "launch",
+            "mainClass": "ets_pbo.MenuUtama"
+        }
+    ]
+}

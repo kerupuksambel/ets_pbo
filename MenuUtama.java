@@ -28,7 +28,8 @@ public class MenuUtama {
 					break;
 				case 2:
 				{
-					
+					ITiketdanHotel it = new ITiketdanHotel();
+					it.pilih();
 				}
 					break;
 				case 3:

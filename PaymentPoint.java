@@ -38,12 +38,15 @@ public class PaymentPoint {
                 namaLayanan = layanan[0];
                 break;
             case 2:
+                namaLayanan = layanan[1];
                 break;
 
             case 3:
+                namaLayanan = layanan[2];
                 break;
             
             case 4:
+                namaLayanan = layanan[3];
                 break;
             
             default:

@@ -17,7 +17,6 @@ public class ITiketdanHotel {
 	void pilih() {
 		System.out.println("Silahkan pilih layanan: ");
 		System.out.println("1)Kereta Api	2)Hotel		3)Pesawat");
-		System.out.println("4)Tiket box");
 		int pilihan = scan.nextInt();
 		switch (pilihan) {
 		case 1:
@@ -35,7 +34,44 @@ public class ITiketdanHotel {
 	}
 	
 	void hotel() {
+		System.out.println();
+		System.out.println("Silahkan isi menu berikut: ");
+		String check_in_tgl;
+		String check_out_tgl, nama_hotel;
+		int jumlah_orang, jml_kamar, harga=0;
+		Scanner scansScanner = new Scanner(System.in), ascansScanner = new Scanner(System.in);
 		
+		System.out.println("Masukkan tgl check in: ");
+		check_in_tgl = scansScanner.nextLine();
+		System.out.println("Masukkan tgl check out: ");
+		check_out_tgl = scansScanner.nextLine();
+		System.out.println("Masukkan jumlah orang: ");
+		jumlah_orang = scansScanner.nextInt();
+		System.out.println("Masukkan jumlah kamar: ");
+		jml_kamar = scansScanner.nextInt();
+		System.out.println("Masukkan nama hotel: ");
+		nama_hotel = ascansScanner.nextLine();
+		
+		if(nama_hotel.toLowerCase().equals("hana hotel")) {
+			harga = 2000000 * jml_kamar;
+		}else if (nama_hotel.toLowerCase().equals("the margo hotel")) {
+			harga = 2500000 * jml_kamar;
+		}else if (nama_hotel.toLowerCase().equals("the edge")) {
+			harga = 3000000 * jml_kamar;
+		}
+		
+		code = 2;
+		cetak_resi();
+		System.out.println("Terimakasih, silahkan menuju ke kasir dengan resi ini");
+		System.out.println("Check in: " + check_in_tgl);
+		System.out.println("Check out: " + check_out_tgl);
+		System.out.println("Jumlah orang: " + jumlah_orang);
+		System.out.println("Nama hotel: " + nama_hotel);
+		System.out.println("Jumlah kamar: " + jml_kamar);
+		System.out.println("Total biaya: Rp." + harga);
+		System.out.println("Biaya per orang: " + harga/jumlah_orang);
+		System.out.println();
+		System.out.println();
 	}
 	
 	void pesawat() {
@@ -44,6 +80,7 @@ public class ITiketdanHotel {
 		String bandara_tujuan, bandara_asal;
 		int jml_dewasa, jml_bayi;
 		String tgl_berangkat, pesawats = "";
+		String no_telpString;
 		String pesawat[] = {"Batik Air", "Garuda Indonesia", "AirAsia"};
 		
 		Scanner aScanner = new Scanner(System.in);
@@ -58,6 +95,8 @@ public class ITiketdanHotel {
 		jml_bayi = aScanner.nextInt();
 		System.out.println("Tanggal berangkat: ");
 		tgl_berangkat = bScanner.nextLine();
+		System.out.println("Masukkan no Telp: ");
+		no_telpString = bScanner.nextLine();
 
 		if(bandara_asal.toLowerCase().equals("juanda") && bandara_tujuan.toLowerCase().equals("Halim Perdanakusuma")){
 			if(jml_bayi == 0){
@@ -88,7 +127,7 @@ public class ITiketdanHotel {
 				pesawats = pesawat[rand.nextInt(2)];
 			}
 		}
-		code = 2;
+		code = 3;
 		cetak_resi();
 		System.out.println("Terimakasih, silahkan menuju ke kasir dengan resi ini");
 		System.out.println("Bandara asal: " + bandara_asal);
@@ -97,6 +136,7 @@ public class ITiketdanHotel {
 		System.out.println("Jumlah dewasa: " + jml_dewasa);
 		System.out.println("Jumlah anak-anak: " + jml_bayi);
 		System.out.println("Kereta: " + pesawats);
+		System.out.println("No Telp: " + no_telpString);
 		System.out.println("Total biaya: Rp." + (hargas + hargas1));
 		System.out.println();
 		System.out.println();
@@ -107,6 +147,7 @@ public class ITiketdanHotel {
 		System.out.println("Silahkan isi menu berikut: ");
 		String stasiun_tujuan, stasiun_asal;
 		int jml_dewasa, jml_bayi;
+		String no_telpString;
 		String tgl_berangkat, keretas = "";
 		String kereta[] = {"KA Dhoho", "KA Penataran"};
 		
@@ -122,6 +163,8 @@ public class ITiketdanHotel {
 		jml_bayi = aScanner.nextInt();
 		System.out.println("Tanggal berangkat: ");
 		tgl_berangkat = bScanner.nextLine();
+		System.out.println("Masukkan no Telp: ");
+		no_telpString = bScanner.nextLine();
 
 		if(stasiun_asal.toLowerCase().equals("blitar") && stasiun_tujuan.toLowerCase().equals("gubeng")){
 			if(jml_bayi == 0){
@@ -161,6 +204,7 @@ public class ITiketdanHotel {
 		System.out.println("Jumlah dewasa: " + jml_dewasa);
 		System.out.println("Jumlah bayi: " + jml_bayi);
 		System.out.println("Kereta: " + keretas);
+		System.out.println("No Telp: " + no_telpString);
 		System.out.println("Total biaya: Rp." + (hargas + hargas1));
 		System.out.println();
 		System.out.println();

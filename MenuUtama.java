@@ -34,20 +34,19 @@ public class MenuUtama {
 					break;
 				case 3:
 				{
-					IndomaretDelivery iDelivery = new IndomaretDelivery();
-					iDelivery.menu();
 				}
-					break;
+				break;
 				case 4:
 				{
 					
 				}
-					break;
+				break;
 				case 5:
 				{
-					
+					IndomaretDelivery iDelivery = new IndomaretDelivery();
+					iDelivery.menu();
 				}
-					break;
+				break;
 				case 6:
 				{
 					

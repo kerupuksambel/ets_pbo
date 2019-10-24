@@ -38,7 +38,7 @@ public class IndomaretDelivery {
         System.out.println("Bayar ke kasir dengan membawa kode pembayaran.");
     }
 
-    public void submenu(String n){
+    private void submenu(String n){
         String input = "";
         int count = 1;
         switch (n) {
@@ -79,7 +79,7 @@ public class IndomaretDelivery {
         hargaTotal = hargaSatuan * jumlahBarang;
     }
 
-    public void identitasmenu(){
+    private void identitasmenu(){
         System.out.println("Masukkan nama Anda :");
         namaPemesan = scan.next();
         System.out.println("Masukkan alamat Anda :");
@@ -88,7 +88,7 @@ public class IndomaretDelivery {
         noHPPemesan = scan.next();
     }
 
-    public void printinformasi(){
+    private void printinformasi(){
         System.out.println("Nama\t: " + namaPemesan);
         System.out.println("Alamat\t: " + alamatPemesan);
         System.out.println("No HP\t: " + noHPPemesan);
@@ -97,7 +97,7 @@ public class IndomaretDelivery {
         System.out.println("Kode Pembayaran\t: "+ kodePembayaran);
     }
 
-    public void generateKode(){
+    private void generateKode(){
         kodePembayaran = namaBarang.charAt(0) + "-" + noHPPemesan + "-" + namaPemesan.charAt(0);
     }
 }

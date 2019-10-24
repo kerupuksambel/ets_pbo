@@ -33,6 +33,8 @@ public class MenuUtama {
 					break;
 				case 3:
 				{
+					PaymentPoint paymentPoint = new PaymentPoint();
+					paymentPoint.menu();
 				}
 				break;
 				case 4:

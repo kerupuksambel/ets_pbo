@@ -24,9 +24,6 @@ public class MenuUtama {
 					IPulsa aIPulsa = new IPulsa();
 					aIPulsa.fitur1();
 					aIPulsa.resi();
-					if (IPulsa.cekCode == 1) {
-						continue;
-					}
 				}
 					break;
 				case 2:
@@ -36,7 +33,8 @@ public class MenuUtama {
 					break;
 				case 3:
 				{
-					
+					IndomaretDelivery iDelivery = new IndomaretDelivery();
+					iDelivery.menu();
 				}
 					break;
 				case 4:

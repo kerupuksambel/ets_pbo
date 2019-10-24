@@ -10,8 +10,7 @@ public class MenuUtama {
 		while (true) {
 			System.out.println("Silahkan pilih layanan (0 untuk keluar)");
 			System.out.println("1) i-pulsa		2)i-tiket & hotel		3)Payment point");
-			System.out.println("4) Voucher token	5)Indomaret delivery		6)Cicilan tanpa kartu kredit");
-			System.out.println("7) Kartu member indomaret");
+			System.out.println("4)Indomaret delivery");
 			scanner = new Scanner(System.in);
 			int pilihan = scanner.nextInt();
 			if (pilihan == 0) {
@@ -40,20 +39,10 @@ public class MenuUtama {
 				break;
 				case 4:
 				{
-					
-				}
-				break;
-				case 5:
-				{
 					IndomaretDelivery iDelivery = new IndomaretDelivery();
 					iDelivery.menu();
 				}
 				break;
-				case 6:
-				{
-					
-				}
-					break;
 				default:
 					break;
 				}

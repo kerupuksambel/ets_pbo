@@ -10,7 +10,7 @@ public class MenuUtama {
 		while (true) {
 			System.out.println("Silahkan pilih layanan (0 untuk keluar)");
 			System.out.println("1) i-pulsa		2)i-tiket & hotel		3)Payment point");
-			System.out.println("4)Indomaret delivery");
+			System.out.println("4)Indomaret delivery	5)Tiket Konser");
 			scanner = new Scanner(System.in);
 			int pilihan = scanner.nextInt();
 			if (pilihan == 0) {
@@ -41,6 +41,12 @@ public class MenuUtama {
 				{
 					IndomaretDelivery iDelivery = new IndomaretDelivery();
 					iDelivery.menu();
+				}
+				break;
+				case 5:
+				{
+					TiketKonser tiket = new TiketKonser();
+					tiket.menu();
 				}
 				break;
 				default:
